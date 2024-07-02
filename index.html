@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sample-Site9</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <noscript>
+        <style>
+            .cn-images img{position: relative;display: block;border-bottom: 5px solid #d0ab47;} 
+            .cn-slideshow{height: auto;}
+        </style>
+    </noscript>
+    <script id="barTmpl" type="text/x-jquery-tmpl">
+        <div class="cn-bar">
+            <div class="cn-nav">
+                <a href="#" class="cn-nav-prev">
+                    <span>Previous</span>
+                    <div style="background-image:url(${prevSource});"></div> 
+                </a>
+                <a href="#" class="cn-nav-next">
+                    <span>Next</span>
+                    <div style="background-image:url(${nextSource});"></div>
+                </a>
+            </div><!-- cn-nav -->
+            <div class="cn-nav-content">
+                <div class="cn-nav-content-prev">
+                    <span></span>
+                    <h3>${prevTitle}</h3>
+                </div>
+                <div class="cn-nav-content-current">
+                    <span>Currently viewing</span>
+                    <h2>${currentTitle}</h2>
+                </div>
+                <div class="cn-nav-content-next">
+                    <span></span>
+                    <h3>${nextTitle}</h3>
+                </div>
+            </div><!-- cn-nav-content -->
+        </div><!-- cn-bar -->
+    </script>
+</head>
+<body>
+<header>
+<h1>Sample-Site</h1>
+</header>
+
+<ul>
+	<li><a href="#section1">Top</a></li>
+	<li><a href="#section2">Main</a></li>
+	<li><a href="#section3">Contact</a></li>
+</ul>
+
+<section id="section1">
+    <div class="wrapper">
+        <div id="cn-slideshow" class="cn-slideshow">
+            <div class="cn-images">
+                <img src="images/large/1.jpg" alt="image01" title="Spring" data-thumb="images/thumbs/1.jpg" style="display:block;"/>
+                <img src="images/large/2.jpg" alt="image02" title="Summer" data-thumb="images/thumbs/2.jpg"/>
+                <img src="images/large/3.jpg" alt="image03" title="Autumn" data-thumb="images/thumbs/3.jpg"/>
+                <img src="images/large/4.jpg" alt="image04" title="Winter" data-thumb="images/thumbs/4.jpg"/>
+            </div><!-- cn-images -->
+        </div><!-- cn-slideshow -->
+    </div>
+
+    <p>
+        このサイトはaiが作成したHTMLのテンプレートです。<br>
+        使用する場合、文面・画像を差し替えて、お使いください。<br>
+        ダウンロードは<a id="download-link" href="https://github.com/airis0/site-template9">こちら</a>です。
+    </p>
+
+</section>
+
+<section id="section2">
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br>
+        Aenean commodo ligula eget dolor.<br>
+        Aenean massa.<br>
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<br>
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.<br>
+        Nulla consequat massa quis enim.<br>
+        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.<br>
+        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.<br>
+        Nullam dictum felis eu pede mollis pretium.<br>
+        Integer tincidunt.<br>
+        Cras dapibus.<br>
+        Vivamus elementum semper nisi.<br>
+        Aenean vulputate eleifend tellus.<br>
+        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<br>
+        Phasellus viverra nulla ut metus varius laoreet.<br>
+        Quisque rutrum. Aenean imperdiet.<br>
+        Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.<br>
+        Nam eget dui. Etiam rhoncus.
+    </p>
+    <br>
+    <p>
+        Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.<br>
+        Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.<br>
+        Maecenas nec odio et ante tincidunt tempus.<br>
+        Donec vitae sapien ut libero venenatis faucibus.<br>
+        Nullam quis ante.<br>
+        Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.<br>
+        Sed fringilla mauris sit amet nibh.<br>
+        Donec sodales sagittis magna.<br>
+        Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero.<br>
+        Fusce vulputate eleifend sapien.<br>
+        Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.<br>
+        Nullam accumsan lorem in dui.<br>
+        Cras ultricies mi eu turpis hendrerit fringilla.<br>
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;<br>
+        In ac dui quis mi consectetuer lacinia.<br>
+        Nam pretium turpis et arcu.
+    </p>
+</section>
+
+<section id="section3">
+    <div id="contact">
+        <h1 class="pageTitle">Contact</h1>
+        <hr>
+            <form method="post" action="/">
+                <label>お名前<br><br>
+                    <input type="text" name="name" required>
+                </label>
+                <br><br>
+                <label>電話番号<br><br>
+                    <input type="tel" name="phone-number" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="090-1234-5678" required>
+                </label>
+                <br><br>
+                <label>メールアドレス<br><br>
+                    <input type="email" name="mail" placeholder="mail123address@example.com" maxlength="50" required>
+                </label>
+                <br><br>
+                <label>件名<br><br>
+                    <input type="text" name="subject" maxlength="200" required>
+                </label>
+                <br><br>
+                <label>内容<br><br>
+                    <textarea name="Content" id="Content" cols="30" rows="10" required></textarea>
+                </label>        
+                <br><br>
+                <button type="submit">送信する</button>
+            </form>
+    </div>
+
+</section>
+
+<footer id="pageFoot">
+	<p id="copyright"><small>Copyright&copy; 2021 Sample-Site. All Rights Reserved.</small></p>
+</footer>
+
+<script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="./js/jquery.slideshow.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#cn-slideshow').slideshow();
+    });
+</script>
+
+</body>
+</html>
